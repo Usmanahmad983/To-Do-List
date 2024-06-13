@@ -1,0 +1,153 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     /* color: #fff; */
+     text-decoration: none;
+     list-style: none;
+     transition: all ease .5s;
+     color: #fff;
+ }
+
+ .main {
+     height: 100vh;
+     width: 100%;
+     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 49%, rgba(0,0,0,1) 100%);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .app {
+     position: absolute;
+     background-color: rgb(0, 0, 0);
+     min-height: 25%;
+     width: 25rem;
+     border-radius: 10px;
+       
+
+     .logo {
+         position: relative;
+
+         h1 {
+             background-color: rgba(0, 0, 0, 0.63);
+             max-width: 10rem;
+             margin: 1.5rem 1.7rem;
+             border-radius: 7px;
+             padding: .2rem .8rem;
+             color: #fff;
+         }
+     }
+
+     .search {
+         margin: 1rem 1.2rem 2rem 1.2rem;
+         position: relative;
+
+
+
+     }
+
+     .task-input {
+
+         position: relative;
+         width: 75%;
+         padding: .7rem .5rem .7rem 1.3rem;
+         border-radius: 50px;
+         font-size: 1.1rem;
+         border-color: transparent;
+         border: 1px solid rgba(0, 0, 0, 0.29);
+         background-color: transparent;
+         outline: none;
+         background-color: #fff;
+     }
+
+     button{
+         position: absolute;
+         right: 0;
+         /* background-color: brown; */
+         padding: .9rem 1.5rem;
+         border-radius: 50px;
+         font-size: 1.1rem;
+         /* border: 1px solid rgba(0, 0, 0, 0.29); */
+         background: linear-gradient(90deg, rgba(198,198,198,1) 0%, rgba(125,125,125,1) 49%, rgba(198,198,198,1) 100%);
+        color: black;
+         border: none;
+         cursor: pointer;
+     }
+ 
+     button:hover {
+        background: linear-gradient(90deg, rgba(78,78,78,1) 0%, rgba(198,198,198,1) 49%, rgba(78,78,78,1) 100%);
+        color: black;
+     }
+
+     .task-container {
+         /* background-color: antiquewhite; */
+         margin: 0 1.3rem;
+         /* height: 70%; */
+         /* display: flex; */
+         /* flex-direction: column; */
+         /* align-items: center; */
+         position: relative;
+     }
+
+     .task-container ul li {
+         font-size: 1.3rem;
+         /* background-color: blueviolet; */
+         height: 100%;
+         display: flex;
+         justify-content: flex-start;
+         /* flex-direction: column; */
+         align-items: flex-start;
+         margin: 1rem 2.5rem;
+         /* position: absolute; */
+         /* left: 0; */
+
+
+     }
+
+     .task-container ul li::before {
+         content: "";
+         position: absolute;
+         left: 8px;
+         height: 1.5rem;
+         width: 1.5rem;
+         border-radius: 50px;
+         /* background-color: aqua; */
+         background-image: url(img/circle.png);
+         background-size: cover;
+         background-position: center;
+         cursor: pointer;
+     }
+
+     span {
+         content: "";
+         position: absolute;
+         right: 8px;
+         height: 1.5rem;
+         width: 1.5rem;
+         border-radius: 50px;
+         /* background-color: aqua; */
+         background-image: url(img/cross.png);
+         background-size: cover;
+         background-position: center;
+         cursor: pointer;
+         &:hover{
+         transform: rotate(90deg);
+         }
+     }
+
+     .task-container ul .checked {
+         color: #555;
+         text-decoration: line-through;
+     }
+
+     .task-container ul .checked::before {
+         content: "";
+         background-image: url(img/checked.png);
+     }
+
+
+
+
+ }
